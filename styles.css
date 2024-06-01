@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #042A2B;
+    font-family: "Karla", sans-serif;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 2rem;
+    height: 6rem;
+    box-shadow: 0 4px 4px #0003;
+}
+
+header .logo {
+    font-size: 3em;
+    font-weight: 800;
+}
+
+.com {
+    font-size: .6em;
+    color: dodgerblue;
+    font-style: italic;
+    font-weight: 100;
+}
+
+nav, ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    gap: 2rem;
+}
+
+nav ul li a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1em;
+    color: #000;
+    transition: .4s ease;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: dodgerblue;
+    bottom: -10px;
+    transition: .4s ease;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+#btn {
+    border: 2px solid dodgerblue;
+    padding: .5rem 1.5rem;
+    background-color: dodgerblue;
+    border-radius: .5rem;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+#btn:hover {
+    border: 2px solid dodgerblue;
+    background: transparent;
+    color: dodgerblue;
+}
+
+.menu__icon {
+    display: none;
+}
+
+.menu__icon ion-icon {
+    font-size: 2em;
+}
+
+main {
+    width: 100%;
+    padding-inline: 2rem;
+}
+
+main h1 {
+    font-size: 3em;
+    margin-block: 2rem;
+    font-weight: 500;
+}
+
+main .Creative {
+    color: dodgerblue;
+    font-weight: 800;
+}
+
+.service__section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.service__section .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-block-start: 1rem;
+}
+
+.wrapper img {
+    width: 300px;
+    margin-right: 2rem;
+    border: 2px solid rgba(30, 143, 255, 0.467);
+    border-radius: 1rem;
+}
+
+.wrapper .content {
+    width: 250px;
+}
+
+.content h2 {
+    font-size: 2em;
+    margin-block-end: 2rem;
+}
+
+/* SEPARATOR STYLES */
+
+.lines__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lines__container h1 {
+    position: relative;
+    font-variant: small-caps;
+    font-weight: lighter;
+    font-size: 1.1em;
+}
+
+.lines__container h1::after,
+.lines__container h1::before {
+    content: "";
+    position: absolute;
+    height: .01rem;
+    width: 15rem;
+    background-color: #0005;
+}
+
+.lines__container h1::before {
+    top: 50%;
+    right: 110%;
+}
+
+.lines__container h1::after {
+    top: 50%;
+    left: 110%;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 320px) and (max-width: 480px) {
+    body {
+        background-color: #A4C2A8;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        box-shadow: none;
+        height: 5rem;
+        padding-inline-start: 2rem;
+        box-shadow: 0 4px 3px #0006;
+        background-color: #ACEB98;
+    }
+
+    header .logo {
+        font-size: 2em;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        top: 80px;
+        left: 0%;
+        text-align: center;
+        flex-direction: column;
+        background-color: #ACEB98;
+        gap: 0;
+        opacity: 0;
+    }
+
+    nav ul li {
+        padding: 1rem;
+    }
+
+    #btn {
+        margin-block: 1rem;
+    }
+
+    .menu__icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    main {
+        margin-block-start: 7rem;
+    }
+
+    main h1 {
+        font-size: 2.5em;
+    }
+
+    .service__section {
+        display: flex;
+        flex-direction: column;
+        margin-block-end: 2rem;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+
+        width: 90%;
+        margin: auto;
+    }
+
+    .wrapper img {
+        width: 100%;
+        margin-block-end: 1.5rem;
+    }
+
+    .content {
+        margin: auto;
+    }
+
+    .content h2{
+        text-align: center;
+        margin-block-end: 1rem;
+    }
+
+    .content p {
+        text-align: center;
+    }
+}
